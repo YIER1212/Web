@@ -2,11 +2,11 @@ export const RESEARCH_TRACKS = [
   {
     id: 'mixed-reality-ai',
     index: '01',
-    title: '混合现实可交互场景 AI 生成',
-    titleEn: 'AI-Generated Interactive Mixed Reality',
-    question: '如何让生成式智能从“生成画面”走向可理解、可操控、可评估的沉浸式任务环境？',
-    questionEn: 'How can generative intelligence create immersive environments that are understandable, interactive and measurable?',
-    keywords: ['Generative AI', 'Mixed Reality', 'Human–AI Interaction', 'Spatial Computing'],
+    title: '生成式现实、减损现实与混合现实',
+    titleEn: 'Generative, Diminished and Mixed Reality',
+    question: '聚焦 AI 驱动的场景生成与编辑、真实场景视觉元素的选择性弱化与移除，以及虚实融合交互，探索面向感知调节与康复的可控沉浸式环境。',
+    questionEn: 'Exploring controllable immersive environments for perceptual modulation and rehabilitation through AI-driven scene generation and editing, selective attenuation and removal of real-world visual elements, and interaction between physical and virtual content.',
+    keywords: ['Generative Reality', 'Diminished Reality (DR)', 'Mixed Reality (MR)', 'Human–Environment Interaction'],
     accent: '#74f7d1'
   },
   {

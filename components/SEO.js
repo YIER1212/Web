@@ -357,7 +357,7 @@ const getSEOMeta = (props, router, locale) => {
     case '/':
       return {
         title: '松菌君 · Research | 信号、交互与康复',
-        description: '聚焦混合现实可交互场景 AI 生成、脑电运动与语言解码，以及卒中后精神与运动康复。',
+        description: '聚焦生成式现实、减损现实与混合现实、脑电运动与语言解码，以及卒中后精神与运动康复。',
         image: '/og-research.png',
         slug: '',
         type: 'website'
