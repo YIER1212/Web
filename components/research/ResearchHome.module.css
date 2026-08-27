@@ -66,7 +66,6 @@
   font-weight: 760;
   line-height: .78;
   letter-spacing: -.075em;
-  perspective: 900px;
 }
 
 .heroWord {
@@ -93,12 +92,19 @@
 
 .heroWord:nth-child(2) {
   margin-left: clamp(1.2rem, 8vw, 8rem);
+  color: #74f7d1;
+}
+
+/* Paint the gradient on each glyph, not across transformed descendants. */
+.heroWord:nth-child(2) .heroLetter {
   background: linear-gradient(92deg, #74f7d1 4%, #a3c8ff 46%, #7188ff 92%);
   background-size: 180% 100%;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  animation: word-spectrum 5.5s ease-in-out infinite alternate;
+  animation: letter-rise .9s cubic-bezier(.16, 1, .3, 1) backwards,
+    word-spectrum 5.5s ease-in-out infinite alternate;
+  animation-delay: calc(250ms + var(--letter-delay)), 0s;
 }
 
 .heroWord:nth-child(2)::before {
@@ -117,21 +123,20 @@
 }
 
 .heroWord:hover {
-  transform: translateX(.08em) translateZ(22px);
-  filter: drop-shadow(0 0 1.2rem rgba(116, 247, 209, .2));
+  transform: translateX(.04em);
 }
 
 .heroWord:hover::before {
-  transform: translate(-.035em, .075em) translateZ(-12px);
+  transform: translate(-.035em, .075em);
   opacity: .82;
 }
 
 .heroLetter {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(1.15em) rotateX(-58deg);
+  opacity: 1;
+  transform: none;
   transform-origin: 50% 100%;
-  animation: letter-rise .9s cubic-bezier(.16, 1, .3, 1) forwards;
+  animation: letter-rise .9s cubic-bezier(.16, 1, .3, 1) backwards;
   animation-delay: calc(250ms + var(--letter-delay));
 }
 
@@ -320,7 +325,10 @@
 .primaryLink { padding: 1.1rem 1.4rem; border-radius: 999px; background: #06101c; color: white; }
 .secondaryLink { color: #102039; }
 
-@keyframes letter-rise { to { opacity: 1; transform: translateY(0) rotateX(0); } }
+@keyframes letter-rise {
+  from { opacity: 0; transform: translateY(1.15em); }
+  to { opacity: 1; transform: none; }
+}
 @keyframes word-spectrum { to { background-position: 100% 50%; } }
 
 @media (max-width: 760px) {
@@ -342,6 +350,9 @@
 @media (prefers-reduced-motion: reduce) {
   .heroWord { animation: none !important; transition: none; }
   .heroLetter { opacity: 1; transform: none; animation: none; }
+  .heroWord:nth-child(2) .heroLetter { animation: none; }
+  .heroWord:hover { transform: none; }
+  .heroWord::before { transition: none; }
   .journey { height: auto; }
   .journeySticky { position: static; height: auto; }
   .journeyHeader, .progressRail { display: none; }
