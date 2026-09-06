@@ -192,7 +192,7 @@ const ExternalPlugin = props => {
   }, [ANIMATE_CSS_URL, IMG_SHADOW, externalCssList, externalJsList])
 
   const router = useRouter()
-  const coursePage = ['/courses', '/achievements'].includes(router.pathname)
+  const coursePage = ['/', '/courses', '/achievements', '/research', '/blog', '/station-lab', '/station-model'].includes(router.pathname)
   useEffect(() => {
     // 异步渲染谷歌广告
     if (ADSENSE_GOOGLE_ID) {
@@ -254,7 +254,7 @@ const ExternalPlugin = props => {
       {FACEBOOK_APP_ID && FACEBOOK_PAGE_ID && <Messenger />}
       {!coursePage && FIREWORKS && <Fireworks />}
       {SAKURA && <Sakura />}
-      {STARRY_SKY && <StarrySky />}
+      {!coursePage && STARRY_SKY && <StarrySky />}
       {MUSIC_PLAYER && <MusicPlayer />}
       {NEST && <Nest />}
       {!coursePage && FLUTTERINGRIBBON && <FlutteringRibbon />}

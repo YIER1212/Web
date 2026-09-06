@@ -362,6 +362,12 @@ const getSEOMeta = (props, router, locale) => {
         slug: '',
         type: 'website'
       }
+    case '/research':
+      return { title: '研究方向 | 松菌君', description: '生成式现实、脑电解码与卒中康复研究。', image: '/og-research.png', slug: 'research', type: 'website' }
+    case '/station-lab':
+      return { title: '三维研究舱样板 | 松菌君', description: '空间站研究舱建模与连续运镜样板。', image: '/og-research.png', slug: 'station-lab', type: 'website' }
+    case '/blog':
+      return { title: '航行日志 · 博客 | 松菌君', description: '研究、学习与日常思考。', image: '/og-research.png', slug: 'blog', type: 'website' }
     case '/courses':
       return {
         title: '课程与学习 · Learning Archive | 松菌君',

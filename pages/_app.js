@@ -18,6 +18,7 @@ import ErrorHandler from '@/lib/utils/errorHandler'
 import BLOG from '@/blog.config'
 import ExternalPlugins from '@/components/ExternalPlugins'
 import SEO from '@/components/SEO'
+import StationShell from '@/components/research/StationShell'
 import { zhCN } from '@clerk/localizations'
 import dynamic from 'next/dynamic'
 // import { ClerkProvider } from '@clerk/nextjs'
@@ -82,22 +83,21 @@ const MyApp = ({ Component, pageProps }) => {
   )
 
   const enableClerk = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-  const standaloneResearchPage = ['/achievements', '/courses'].includes(route.pathname)
+  const standaloneResearchPage = ['/', '/achievements', '/courses', '/research', '/blog', '/station-lab', '/station-model'].includes(route.pathname)
   const pageContent = standaloneResearchPage ? (
     <>
-      <SEO {...pageProps} />
       <Component {...pageProps} />
     </>
   ) : (
     <GLayout {...pageProps}>
-      <SEO {...pageProps} />
       <Component {...pageProps} />
     </GLayout>
   )
   const content = (
     <AppErrorBoundary>
       <GlobalContextProvider {...pageProps}>
-        {pageContent}
+        <SEO {...pageProps} />
+        <StationShell>{pageContent}</StationShell>
         <ExternalPlugins {...pageProps} />
       </GlobalContextProvider>
     </AppErrorBoundary>

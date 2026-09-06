@@ -105,7 +105,7 @@ const LayoutBase = props => {
         <Style />
 
         {/* 顶部导航 */}
-        <Header {...props} />
+        {!immersiveResearchHome && <Header {...props} />}
 
         {/* 顶部嵌入 */}
         <Transition
@@ -185,7 +185,7 @@ const LayoutBase = props => {
  * @returns
  */
 const LayoutIndex = props => {
-  if (!siteConfig('HEXO_IMMERSIVE_RESEARCH_HOME', true, CONFIG)) {
+  if (props.blogOnly || !siteConfig('HEXO_IMMERSIVE_RESEARCH_HOME', true, CONFIG)) {
     return <LayoutPostList {...props} className='pt-8' />
   }
   return (

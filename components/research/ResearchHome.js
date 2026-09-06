@@ -4,6 +4,7 @@ import { RESEARCH_TRACKS } from '@/data/research-tracks'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import FluidCanvas from './FluidCanvas'
 import styles from './ResearchHome.module.css'
+import StationNavigation from './StationNavigation'
 
 const heroWords = ['BRAIN', 'CHANGES', 'WORLD']
 
@@ -89,7 +90,9 @@ function FeaturedCarousel() {
   )
 }
 
-export default function ResearchHome() {
+export default function ResearchHome() { return <StationNavigation /> }
+
+export function ResearchNarrative() {
   const journeyRef = useRef(null)
   const finaleRef = useRef(null)
   const [activeTrack, setActiveTrack] = useState(0)

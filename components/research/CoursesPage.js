@@ -21,7 +21,7 @@ export default function CoursesPage({ courses = [], preview = false }) {
         <header className={styles.navigation}>
           <Link href='/' className={styles.brand}>SONGJUN <span>Research</span></Link>
           <nav aria-label='研究网站导航'>
-            <Link href='/'>首页</Link><Link href='/#research-journey'>研究</Link>
+            <Link href='/'>首页</Link><Link href='/research'>研究</Link>
             <Link href='/achievements'>成果</Link><Link href='/courses' aria-current='page'>课程</Link><Link href='/#blog'>博客</Link>
           </nav>
         </header>
