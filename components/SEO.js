@@ -362,6 +362,14 @@ const getSEOMeta = (props, router, locale) => {
         slug: '',
         type: 'website'
       }
+    case '/courses':
+      return {
+        title: '课程与学习 · Learning Archive | 松菌君',
+        description: '记录学过的课程，以及它们带来的思考与实践。Learning, connected to research.',
+        image: '/og-research.png',
+        slug: 'courses',
+        type: 'website'
+      }
     case '/achievements':
       return {
         title: '研究成果 · Achievements | 松菌君',

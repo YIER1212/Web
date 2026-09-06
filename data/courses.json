@@ -1,0 +1,20 @@
+[
+  {
+    "id": "analog-electronics-sjtu",
+    "title": "模拟电子技术基础",
+    "titleEn": "Fundamentals of Analog Electronics",
+    "category": "电子技术",
+    "summary": "上海交通大学 · 郑益慧主讲。",
+    "url": "https://www.bilibili.com/video/BV1TJ411G7sk/",
+    "cover": "/images/courses/signals.svg"
+  },
+  {
+    "id": "andrew-ng-large-language-models",
+    "title": "吴恩达 · 大模型课程",
+    "titleEn": "Large Language Models · Andrew Ng",
+    "category": "人工智能",
+    "summary": "围绕大模型微调、提示词与 LangChain 展开的课程学习。",
+    "url": "https://www.bilibili.com/video/BV16C4y197St/",
+    "cover": "/images/courses/network.svg"
+  }
+]

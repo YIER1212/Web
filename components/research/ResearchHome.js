@@ -137,7 +137,7 @@ export default function ResearchHome() {
         <div className={styles.noise} aria-hidden='true' />
         <div className={styles.heroNav}>
           <span>SONGJUN · RESEARCH</span>
-          <a href='#research-journey'>SCROLL TO EXPLORE ↓</a>
+          <div><SmartLink href='/courses'>课程与学习 ↗</SmartLink><a href='#research-journey' style={{ marginLeft: '1.5rem' }}>SCROLL TO EXPLORE ↓</a></div>
         </div>
         <div className={styles.heroCopy}>
           <p className={styles.kicker}>BIOMEDICAL ENGINEERING · HUMAN-CENTERED AI</p>
@@ -209,6 +209,7 @@ export default function ResearchHome() {
           <h2>从问题出发，<br />让每一步都有迹可循。</h2>
           <p>From questions to evidence — an evolving record of research, prototypes and outcomes.</p>
           <SmartLink href='/achievements' className={styles.primaryLink}>查看全部成果 · VIEW ACHIEVEMENTS ↗</SmartLink>
+          <SmartLink href='/courses' className={styles.secondaryLink}>课程与学习 · LEARNING ARCHIVE ↗</SmartLink>
           <a href='#blog' className={styles.secondaryLink}>继续阅读博客 · CONTINUE TO JOURNAL ↓</a>
         </div>
       </section>

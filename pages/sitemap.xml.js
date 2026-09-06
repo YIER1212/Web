@@ -33,6 +33,11 @@ export const getServerSideProps = async ctx => {
     fields = fields.concat(localeFields)
   }
 
+  fields.push({
+    loc: buildSitemapLoc({ baseUrl: normalizeSitemapBaseUrl(BLOG.LINK), slug: 'courses' }),
+    changefreq: 'monthly',
+    priority: '0.7'
+  })
   fields = getUniqueFields(fields)
 
   // 缓存

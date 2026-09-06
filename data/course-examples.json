@@ -1,0 +1,8 @@
+[
+  { "id": "machine-learning", "title": "机器学习", "titleEn": "Machine Learning", "category": "人工智能", "summary": "从数据中发现规律，理解学习的基本方法。", "cover": "/images/courses/waves.svg" },
+  { "id": "deep-learning", "title": "深度学习", "titleEn": "Deep Learning", "category": "人工智能", "summary": "理解神经网络、表征学习与生成模型。", "cover": "/images/courses/network.svg" },
+  { "id": "computational-neuroscience", "title": "计算神经科学", "titleEn": "Computational Neuroscience", "category": "脑科学", "summary": "用模型探索神经活动与认知过程。", "cover": "/images/courses/neurons.svg" },
+  { "id": "brain-computer-interfaces", "title": "脑机接口", "titleEn": "Brain–Computer Interfaces", "category": "脑科学", "summary": "从脑电信号处理到意图解码与交互。", "cover": "/images/courses/signals.svg" },
+  { "id": "computer-graphics", "title": "计算机图形学", "titleEn": "Computer Graphics", "category": "空间计算", "summary": "学习几何、渲染与三维世界的构建。", "cover": "/images/courses/geometry.svg" },
+  { "id": "mixed-reality", "title": "混合现实开发", "titleEn": "Mixed Reality Development", "category": "空间计算", "summary": "将虚拟内容融入真实空间与交互。", "cover": "/images/courses/spatial.svg" }
+]

@@ -82,7 +82,7 @@ const MyApp = ({ Component, pageProps }) => {
   )
 
   const enableClerk = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY
-  const standaloneResearchPage = route.pathname === '/achievements'
+  const standaloneResearchPage = ['/achievements', '/courses'].includes(route.pathname)
   const pageContent = standaloneResearchPage ? (
     <>
       <SEO {...pageProps} />

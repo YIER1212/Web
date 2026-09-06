@@ -192,6 +192,7 @@ const ExternalPlugin = props => {
   }, [ANIMATE_CSS_URL, IMG_SHADOW, externalCssList, externalJsList])
 
   const router = useRouter()
+  const coursePage = ['/courses', '/achievements'].includes(router.pathname)
   useEffect(() => {
     // 异步渲染谷歌广告
     if (ADSENSE_GOOGLE_ID) {
@@ -243,7 +244,7 @@ const ExternalPlugin = props => {
       {/* 全局样式嵌入 */}
       <GlobalStyle />
       {ENABLE_ICON_FONT && <IconFont />}
-      {MOUSE_FOLLOW && <MouseFollow />}
+      {!coursePage && MOUSE_FOLLOW && <MouseFollow />}
       {pluginsIdle && THEME_SWITCH && <ThemeSwitch />}
       {DEBUG && <DebugPanel />}
       {ANALYTICS_ACKEE_TRACKER && <Ackee />}
@@ -251,14 +252,14 @@ const ExternalPlugin = props => {
       {ANALYTICS_VERCEL && <Analytics />}
       {ANALYTICS_BUSUANZI_ENABLE && <Busuanzi />}
       {FACEBOOK_APP_ID && FACEBOOK_PAGE_ID && <Messenger />}
-      {FIREWORKS && <Fireworks />}
+      {!coursePage && FIREWORKS && <Fireworks />}
       {SAKURA && <Sakura />}
       {STARRY_SKY && <StarrySky />}
       {MUSIC_PLAYER && <MusicPlayer />}
       {NEST && <Nest />}
-      {FLUTTERINGRIBBON && <FlutteringRibbon />}
+      {!coursePage && FLUTTERINGRIBBON && <FlutteringRibbon />}
       {COMMENT_TWIKOO_COUNT_ENABLE && <TwikooCommentCounter {...props} />}
-      {RIBBON && <Ribbon />}
+      {!coursePage && RIBBON && <Ribbon />}
       {DIFY_CHATBOT_ENABLED && <DifyChatbot />}
       {CUSTOM_RIGHT_CLICK_CONTEXT_MENU && (
         <CustomContextMenu {...props} canCopy={canCopy} />

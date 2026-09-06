@@ -49,7 +49,11 @@ export const MenuListTop = props => {
   }
 
   if (!links || links.length === 0) {
-    return null
+    links = []
+  }
+
+  if (!links.some(link => link?.href === '/courses')) {
+    links = [...links, { name: '课程', href: '/courses', icon: 'fas fa-book-open', show: true }]
   }
 
   return (

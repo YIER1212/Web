@@ -4,7 +4,7 @@
 .page header { position: relative; padding: clamp(7rem, 13vw, 12rem) 0 6rem; border-bottom: 1px solid #253048; }
 .page header > p { color: #74f7d1; font: .75rem ui-monospace, monospace; letter-spacing: .16em; }
 .page h1 { margin: 1.5rem 0 0; font-size: clamp(3rem, 8vw, 8rem); line-height: .98; letter-spacing: -.065em; }
-.page header > div { position: absolute; right: 0; bottom: 6rem; display: flex; align-items: end; gap: 1rem; }
+.page header > div { display: flex; align-items: end; gap: 1rem; margin-top: 3rem; }
 .page header > div span { font-size: clamp(3rem, 7vw, 7rem); line-height: .8; color: #91a7ff; }
 .page header > div p { margin: 0; color: #8e9bb0; font: .7rem/1.5 ui-monospace, monospace; }
 .filters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; padding: 2rem 0; border-bottom: 1px solid #253048; }
@@ -17,6 +17,17 @@
 .timeline p { max-width: 48rem; color: #98a6ba; line-height: 1.7; }
 .timeline .english { color: #d4deee; }
 .timeline a { color: #74f7d1; }
+.overview { display: flex; flex-wrap: wrap; gap: 3rem; padding: 2rem 0 0; }
+.overview > div { display: flex; gap: .8rem; align-items: baseline; }
+.overview strong { font-size: 2rem; color: #74f7d1; }
+.overview span { font-size: .75rem; color: #98a6ba; }
+.record { min-width: 0; }
+.record h2, .english { overflow-wrap: anywhere; }
+.cover { display: block; width: 100%; max-width: 48rem; height: auto; aspect-ratio: 720 / 200; object-fit: cover; border: 1px solid #253048; border-radius: 1rem; margin-bottom: 1.5rem; }
+.badges { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.2rem 0; }
+.badges span { border: 1px solid #34534f; color: #a2efdb; padding: .5rem .7rem; border-radius: 2rem; letter-spacing: normal; }
+.empty button { border: 1px solid #74f7d1; background: transparent; color: #74f7d1; padding: .8rem 1.2rem; border-radius: .6rem; cursor: pointer; }
+.page a:focus-visible, .page button:focus-visible, .page select:focus-visible { outline: 2px solid #74f7d1; outline-offset: 5px; }
 .empty { max-width: 54rem; margin: 10rem auto; text-align: center; }
 .empty span { color: #74f7d1; font: .7rem ui-monospace, monospace; letter-spacing: .16em; }
 .empty h2 { margin: 1.4rem 0; font-size: clamp(2.4rem, 5vw, 5rem); letter-spacing: -.04em; }
