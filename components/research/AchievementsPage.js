@@ -4,7 +4,7 @@ import { RESEARCH_TRACKS } from '@/data/research-tracks'
 import { useMemo, useState } from 'react'
 import styles from './AchievementsPage.module.css'
 
-const typeLabels = { paper: '论文 / PREPRINT', project: '项目 / SOFTWARE', patent: '专利 / PATENT', award: '奖项 / AWARD' }
+const typeLabels = { paper: '论文 / PREPRINT', project: '项目 / SOFTWARE', patent: '专利 / PATENT', award: '竞赛奖项 / AWARD' }
 const tracks = [...RESEARCH_TRACKS, { id: 'medical-engineering', title: '医学工程与触觉感知' }]
 
 export default function AchievementsPage() {
@@ -16,7 +16,7 @@ export default function AchievementsPage() {
     (track === 'all' || item.researchTrack === track) &&
     (type === 'all' || item.type === type) &&
     (year === 'all' || String(item.date || '').startsWith(year))
-  )
+  ).sort((a, b) => b.date.localeCompare(a.date))
 
   return (
     <main className={styles.page}>
